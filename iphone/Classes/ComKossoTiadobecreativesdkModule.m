@@ -129,7 +129,7 @@
     return tools;
 }
 
--(void)newEditorController:(UIImage *)source withTools:(NSArray *)toolKey
+-(void)newEditorController:(UIImage *)source withTools:(NSArray *)toolKey animated:(BOOL)animated purge:(BOOL)purge
 {
     
     NSArray *tools = [self convertToRealToolsKey:toolKey];
@@ -137,10 +137,13 @@
                         initWithImage:source
                         ];
     [AdobeImageEditorCustomization setToolOrder:tools];
+    if (purge) {
+        [AdobeImageEditorCustomization purgeGPUMemoryWhenPossible:YES];
+    }
     
     [editorController setDelegate:self];
-    
-    [[TiApp app] showModalController: editorController animated: NO];
+
+    [[TiApp app] showModalController: editorController animated: animated];
 }
 
 #pragma Public APIs
@@ -163,7 +166,9 @@
     
     UIImage *source = [self convertToUIImage:[params objectForKey:@"image"]];
     NSArray *tools = [NSArray arrayWithArray:(NSArray *)[params objectForKey:@"tools"]];
-    [self newEditorController:source withTools:tools];
+    BOOL animated = [TiUtils boolValue:@"animated" properties:params def:NO];
+    BOOL purge = [TiUtils boolValue:@"purge" properties:params def:NO];
+    [self newEditorController:source withTools:tools animated:animated purge:purge];
 }
 
 #define view_parentViewController(_view_) (([_view_ parentViewController] != nil || ![_view_ respondsToSelector:@selector(presentingViewController)]) ? [_view_ parentViewController] : [_view_ presentingViewController])
