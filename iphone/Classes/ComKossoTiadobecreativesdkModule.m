@@ -109,7 +109,7 @@
 -(void)newEditorController:(UIImage *)source
 {
     
-    editorController = [[AFPhotoEditorController alloc] initWithImage:source];
+    editorController = [[AdobeUXImageEditorViewController alloc] initWithImage:source];
     [editorController setDelegate:self];
     
     [[TiApp app] showModalController: editorController animated: NO];
@@ -129,14 +129,24 @@
     return tools;
 }
 
--(void)newEditorController:(UIImage *)source withTools:(NSArray *)toolKey animated:(BOOL)animated purge:(BOOL)purge
+-(void)newEditorController:(UIImage *)source withTools:(NSArray *)toolKey withCrops:(NSArray *)crops animated:(BOOL)animated purge:(BOOL)purge
 {
     
     NSArray *tools = [self convertToRealToolsKey:toolKey];
-    editorController = [[AFPhotoEditorController alloc]
+    editorController = [[AdobeUXImageEditorViewController alloc]
                         initWithImage:source
                         ];
     [AdobeImageEditorCustomization setToolOrder:tools];
+
+    NSMutableArray *croptools = [[[NSMutableArray alloc]initWithCapacity:[crops count] / 3]autorelease];
+    for (int i = 0; i < [crops count]; i += 3) {
+        [croptools addObject: @{kAdobeImageEditorCropPresetName: crops[i],kAdobeImageEditorCropPresetHeight : crops[i + 1], kAdobeImageEditorCropPresetWidth: crops[i + 2]}];
+    }
+    [AdobeImageEditorCustomization setCropToolOriginalEnabled:YES];
+    [AdobeImageEditorCustomization setCropToolCustomEnabled:YES];
+    [AdobeImageEditorCustomization setCropToolInvertEnabled: YES];
+    [AdobeImageEditorCustomization setCropToolPresets:croptools];
+
     if (purge) {
         [AdobeImageEditorCustomization purgeGPUMemoryWhenPossible:YES];
     }
@@ -161,19 +171,27 @@
     // Set Supported Orientations
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         NSArray * supportedOrientations = @[@(UIInterfaceOrientationPortrait), @(UIInterfaceOrientationPortraitUpsideDown), @(UIInterfaceOrientationLandscapeLeft), @(UIInterfaceOrientationLandscapeRight)];
-        [AFPhotoEditorCustomization setSupportedIpadOrientations:supportedOrientations];
+        [AdobeImageEditorCustomization setSupportedIpadOrientations:supportedOrientations];
     }
     
     UIImage *source = [self convertToUIImage:[params objectForKey:@"image"]];
     NSArray *tools = [NSArray arrayWithArray:(NSArray *)[params objectForKey:@"tools"]];
     BOOL animated = [TiUtils boolValue:@"animated" properties:params def:NO];
     BOOL purge = [TiUtils boolValue:@"purge" properties:params def:NO];
-    [self newEditorController:source withTools:tools animated:animated purge:purge];
+    NSArray *crops = [NSArray arrayWithArray:(NSArray *)[params objectForKey:@"crops"]];
+
+    if ([crops count] != 0) {
+        [self newEditorController:source withTools:tools withCrops:crops animated: animated purge: purge];
+    } else {
+        NSArray *crops = @[@"Square", @1.0f, @1.0f, @"3:4", @3.0f, @4.0f, @"4:6", @4.0f, @6.0f, @"5:7", @5.0f, @7.0f, @"8:10", @8.0f, @10.0f, @"9:16", @9.0f, @16.0f];
+        [self newEditorController:source withTools:tools withCrops:crops animated: animated purge: purge];
+    }
+    // [self newEditorController:source withTools:tools animated:animated purge:purge];
 }
 
 #define view_parentViewController(_view_) (([_view_ parentViewController] != nil || ![_view_ respondsToSelector:@selector(presentingViewController)]) ? [_view_ parentViewController] : [_view_ presentingViewController])
 
--(void)photoEditor:(AFPhotoEditorController *)editor finishedWithImage:(UIImage *)image
+-(void)photoEditor:(AdobeUXImageEditorViewController *)editor finishedWithImage:(UIImage *)image
 {
     [self fireEvent:@"avEditorFinished" withObject:[self convertResultDic:image]];
     
@@ -187,7 +205,7 @@
     [editor release];
 }
 
--(void)photoEditorCanceled:(AFPhotoEditorController *)editor
+-(void)photoEditorCanceled:(AdobeUXImageEditorViewController *)editor
 {
     
     [self fireEvent:@"avEditorCancel" withObject:nil];
@@ -202,5 +220,18 @@
     [editor release];
 }
 
+-(void)setStatusBarStyle:(id)style
+{
+    [AdobeImageEditorCustomization setStatusBarStyle:[TiUtils intValue:style]];
+}
+
+-(void)setCancelApplyButtons:(id)params
+{
+    NSArray *cancel = @[kAdobeImageEditorLeftNavigationTitlePresetCancel, kAdobeImageEditorLeftNavigationTitlePresetBack, kAdobeImageEditorLeftNavigationTitlePresetExit];
+    NSArray *apply = @[kAdobeImageEditorRightNavigationTitlePresetDone, kAdobeImageEditorRightNavigationTitlePresetSave, kAdobeImageEditorRightNavigationTitlePresetNext,kAdobeImageEditorRightNavigationTitlePresetSend];
+    
+    [AdobeImageEditorCustomization setLeftNavigationBarButtonTitle:cancel[[[params objectForKey:@"cancel"] integerValue]]];
+    [AdobeImageEditorCustomization setRightNavigationBarButtonTitle:apply[[[params objectForKey:@"save"] integerValue]]];
+}
 
 @end

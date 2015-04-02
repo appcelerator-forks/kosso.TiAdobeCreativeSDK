@@ -50,16 +50,22 @@
 <str name="IDS_CAPTION_OPEN" translate="yes">
 	<val>ОТКРЫТЬ</val>
 </str>
+<str name="IDS_CAPTION_OPEN_AS_RENDITON" translate="yes">
+    <val>Использовать как изображение</val>
+</str>
+<str name="IDS_CAPTION_INSPECT_EXTRACT_LAYERS" translate="yes">
+    <val>Извлечь слои</val>
+</str>
 <str name="IDS_CAPTION_OPEN_SELECTION" translate="yes">
-	<val>ОТКРЫТЬ ВЫБР.</val>
+    <val>ОТКРЫТЬ ВЫБР.</val>
 </str>
 <str name="IDS_CAPTION_OPEN_SELECTION_HUNDRED" translate="yes">
-	<desc>The OPEN SELECTION string will be substituted in here.</desc>
-	<val>%@ (99+)</val>
+    <desc>The OPEN SELECTION string will be substituted in here.</desc>
+    <val>%@ (99+)</val>
 </str>
 <str name="IDS_CAPTION_OPEN_SELECTION_NUMBER" translate="yes">
-	<desc>The OPEN SELECTION string will be substituted in here.</desc>
-	<val>%@ (%lu)</val>
+    <desc>The OPEN SELECTION string will be substituted in here.</desc>
+    <val>%@ (%lu)</val>
 </str>
 <str name="IDS_CAPTION_ACCOUNT_DROPDOWN" translate="yes">
 	<val>Раскрывающийся список учетных записей</val>
@@ -77,23 +83,6 @@
 <str name="IDS_CAPTION_MODIFIED_DATE_TIME" translate="yes">
 	<desc>Placeholders for date and time.</desc>
 	<val>Изменено: %@ в %@</val>
-</str>
-<str name="IDS_CAPTION_SWITCH_ACCOUNTS" translate="yes">
-	<val>Переключить учетные записи</val>
-</str>
-<str name="IDS_CAPTION_STORAGE_GB_USED_PERCENTAGE" translate="yes">
-	<desc>Will be substituted with two different decimal numbers for storage space.</desc>
-	<val>%@ исп.</val>
-</str>
-<str name="IDS_CAPTION_STORAGE_GB_USED_FRACTION" translate="yes">
-	<desc>Will be substituted with two different decimal numbers for storage space.</desc>
-	<val>(%@ из %@ ГБ)</val>
-</str>
-<str name="IDS_CAPTION_STORAGE_INFO_CALCULATING_PLACEHOLDER" translate="yes">
-    <val>(Оценка использования)</val>
-</str>
-<str name="IDS_CAPTION_EDIT_SETTINGS" translate="yes">
-	<val>Cмена настроек Creative Cloud</val>
 </str>
 <str name="IDS_CAPTION_NO_SEARCH_RESULTS" translate="yes">
 	<val>Результаты поиска отсутствуют.</val>
@@ -117,6 +106,9 @@
 <str name="IDS_CAPTION_COLLATION_UNKNOWN_DATE" translate="yes">
     <val>НЕИЗВЕСТНО</val>
 </str>
+<str name="IDS_UPGRADE_UNSUPPORTED_URL" translate="yes">
+    <val>Неподдерживаемый тип URL-адреса</val>
+</str>
 <str name="IDS_CAPTION_PAGE_NUMBER" translate="yes">
 	<desc>Used for page numbers, such as "5 of 20".</desc>
 	<val>%lu из %lu</val>
@@ -130,19 +122,11 @@
 <str name="IDS_CAPTION_SEND" translate="yes">
 	<val>Отправить</val>
 </str>
-<str name="IDS_CAPTION_GET_MORE_STORAGE" translate="yes">
-	<val>Расширить хранилище</val>
-</str>
 <str name="IDS_CAPTION_CAMERA_ROLL" translate="yes">
 	<val>Фотогалерея</val>
 </str>
 <str name="IDS_CAPTION_UPLOAD" translate="yes">
 	<val>Загрузка</val>
-</str>
-<str name="IDS_CAPTION_TOOLBAR_CONTEXT_MENU_MY_ACCOUNT" translate="yes">
-    <desc>Menu item title for the toolbar menu on iPhone/iPod touch devices to view user's account
-        details.</desc>
-    <val>Учетная запись</val>
 </str>
 <str name="IDS_CAPTION_ERROR" translate="yes">
 	<val>Ошибка</val>
@@ -181,16 +165,13 @@
 	<val>Нет</val>
 </str>
 <str name="IDS_CAPTION_LAST_UPDATED" translate="yes">
-	<val>Последнее обновление: %@</val>
+    <val>Последнее обновление: %@</val>
 </str>
 <str name="IDS_CAPTION_NEVER" translate="yes">
-	<val>Никогда</val>
+    <val>Никогда</val>
 </str>
 <str name="IDS_CAPTION_LOADING_MORE_ITEMS_FAILED" translate="yes">
     <val>Ошибка при загрузке элементов.</val>
-</str>
-<str name="IDS_UPGRADE_UNSUPPORTED_URL" translate="yes">
-    <val>Неподдерживаемый тип URL-адреса</val>
 </str>
 <str name="IDS_CAPTION_LIST_VIEW_MULTI_SELECT_CHECKMARK" translate="yes">
     <val>Выбрать</val>
@@ -244,6 +225,10 @@
 <str name="IDS_CAPTION_NAVIGATION_BAR_TITLE_ASSETS" translate="yes">
     <desc>Appears as the title of the root asset browser.</desc>
     <val>Ресурсы</val>
+</str>
+<str name="IDS_CAPTION_NAVIGATION_BAR_TITLE_LIBRARIES" translate="yes">
+    <desc>Appears as the title of the root asset browser.</desc>
+    <val>Библиотеки</val>
 </str>
 <str name="IDS_CAPTION_NAVIGATION_BAR_MORE_BUTTON_POPOVER_VIEW_AS_LIST" translate="yes">
     <desc>Option to show the list view in the main asset browser.</desc>
@@ -319,9 +304,6 @@
 <str name="IDS_CAPTION_SOURCE_TYPE_SELECTION_POPOVER_DRAW" translate="no">
     <val>Illustrator Draw</val>
 </str>
-<str name="IDS_CAPTION_SOURCE_TYPE_SELECTION_POPOVER_CAMERA_ROLL" translate="yes">
-    <val>Фотогалерея</val>
-</str>
 <str name="IDS_CAPTION_SOURCE_TYPE_SELECTION_POPOVER_ON_MY_DEVICE" translate="yes">
     <desc>This string will be appened by the model of the device. So an example would be "On My
         iPod touch"</desc>
@@ -329,5 +311,8 @@
 </str>
 <str name="IDS_CAPTION_STORAGE_NETWORK_ERROR" translate="yes">
     <val>Не удается подключиться к iTunes Store для расширения хранилища.</val>
+</str>
+<str name="IDS_CAPTION_PREPARING_VIDEO_FOR_PREVIEW" translate="yes">
+    <val>Скоро будет готов наш видеообзор. Посетите страницу позже, чтобы просмотреть этот видеоролик. </val>
 </str>
 </asf>

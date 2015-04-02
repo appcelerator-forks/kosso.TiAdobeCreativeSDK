@@ -18,7 +18,7 @@ You can then open the frameworks and go into 'Resources' and copy out the `Adobe
 - Install the module locally to the app (in modules/iphone/.. in your project root folder).
 
 
-# Exmaple
+# Example
 
 ~~~
 
@@ -30,14 +30,24 @@ var edited_image;
 
 // Editor tool options.
 var tools = ['kAFEffects','kAFEnhance','kAFOrientation','kAFAdjust', 'kAFCrop','kAFSharpness','kAFText','kAFStickers','kAFDraw','kAFMeme','kAFFrames','kAFFocus'];
+var alltools = ['kAFEnhance', 'kAFEffects', 'kAFFrames', 'kAFOverlays', 'kAFVignette', 'kAFCrop', 'kAFSplash', 'kAFFocus', 'kAFOrientation', 'kAFAdjustments', 'kAFSharpness', 'kAFStickers', 'kAFDraw', 'kAFMeme', 'kAFText', 'kAFRedeye', 'kAFWhiten', 'kAFBlemish', 'kAFBlur'];
 
 // Obtain an App Client ID from Adode https://creativesdk.adobe.com/myapps.html  - You will need an Adobe ID. 
 
 var adobe_client_id = 'YOUR_ADOBE_CREATIVE_SDK_CLIENT_ID';
 var adobe_client_secret = 'YOUR_ADOBE_CREATIVE_SDK_CLIENT_SECRET';
 
+// set statusbar color
+photo_editor.setStatusBarStyle(Ti.UI.iPhone.StatusBar.LIGHT_CONTENT);
+set text of Cancel and Apply buttons
+photo_editor.setCancelApplyButtons({cancel:0, save: 1});
+
 // Open the image in the Adobe CreativeSDK Image Editor
 photo_editor.newImageEditor({apikey:adobe_client_id, secret: adobe_client_secret, image: image_blob, tools: tools});
+
+// Open the image in the Adobe CreativeSDK Image Editor with custom crops
+var crops = ["Avatar", 400, 400, "Cover", 960, 260];
+photo_editor.newImageEditor({apikey:adobe_client_id, secret: adobe_client_secret, image: image_blob, tools: tools, crops: crops});
  
 // Fired when the editor is done 
 photo_editor.addEventListener('avEditorFinished', function(e){
@@ -59,4 +69,8 @@ photo_editor.addEventListener('avEditorFinished', function(e){
 ~~~
 
 
+# Authors
+1.0.0 Initial version by Kosso [Twitter](https://twitter.com/kosso) [App.net](https://app.net/kosso)
+1.0.1 update by Jérôme Danthinne [Twitter](https://twitter.com/jdanthinne) 
+1.1.0 update by Steven van Loef [Twitter](https://twitter.com/ludolphus) [App.net](https://app.net/ludolphus)
 
