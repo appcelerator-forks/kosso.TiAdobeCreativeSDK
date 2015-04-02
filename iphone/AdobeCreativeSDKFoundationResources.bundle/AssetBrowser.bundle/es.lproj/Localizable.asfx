@@ -20,6 +20,9 @@
 		substition, translation length restrictions due to UI space, etc.
 -->
 
+<str name="IDS_CAPTION_OK" translate="yes">
+	<val>OK</val>
+</str>
 <str name="IDS_CAPTION_CLOSE" translate="yes">
 	<val>Cerrar</val>
 </str>
@@ -47,16 +50,22 @@
 <str name="IDS_CAPTION_OPEN" translate="yes">
 	<val>ABRIR</val>
 </str>
+<str name="IDS_CAPTION_OPEN_AS_RENDITON" translate="yes">
+    <val>Usar como imagen</val>
+</str>
+<str name="IDS_CAPTION_INSPECT_EXTRACT_LAYERS" translate="yes">
+    <val>Extraer capas</val>
+</str>
 <str name="IDS_CAPTION_OPEN_SELECTION" translate="yes">
-	<val>ABRIR SELECCIÓN</val>
+    <val>ABRIR SELECCIÓN</val>
 </str>
 <str name="IDS_CAPTION_OPEN_SELECTION_HUNDRED" translate="yes">
-	<desc>The OPEN SELECTION string will be substituted in here.</desc>
-	<val>%@ (99+)</val>
+    <desc>The OPEN SELECTION string will be substituted in here.</desc>
+    <val>%@ (99+)</val>
 </str>
 <str name="IDS_CAPTION_OPEN_SELECTION_NUMBER" translate="yes">
-	<desc>The OPEN SELECTION string will be substituted in here.</desc>
-	<val>%@ (%lu)</val>
+    <desc>The OPEN SELECTION string will be substituted in here.</desc>
+    <val>%@ (%lu)</val>
 </str>
 <str name="IDS_CAPTION_ACCOUNT_DROPDOWN" translate="yes">
 	<val>Menú desplegable de cuenta</val>
@@ -74,23 +83,6 @@
 <str name="IDS_CAPTION_MODIFIED_DATE_TIME" translate="yes">
 	<desc>Placeholders for date and time.</desc>
 	<val>Modificado: %@ a %@</val>
-</str>
-<str name="IDS_CAPTION_SWITCH_ACCOUNTS" translate="yes">
-	<val>Cambiar de cuenta</val>
-</str>
-<str name="IDS_CAPTION_STORAGE_GB_USED_PERCENTAGE" translate="yes">
-	<desc>Will be substituted with two different decimal numbers for storage space.</desc>
-	<val>%@ utilizado</val>
-</str>
-<str name="IDS_CAPTION_STORAGE_GB_USED_FRACTION" translate="yes">
-	<desc>Will be substituted with two different decimal numbers for storage space.</desc>
-	<val>(%@ de %@ GB)</val>
-</str>
-<str name="IDS_CAPTION_STORAGE_INFO_CALCULATING_PLACEHOLDER" translate="yes">
-    <val>(Calculando uso)</val>
-</str>
-<str name="IDS_CAPTION_EDIT_SETTINGS" translate="yes">
-	<val>Editar config. de Creative Cloud</val>
 </str>
 <str name="IDS_CAPTION_NO_SEARCH_RESULTS" translate="yes">
 	<val>Esta búsqueda no ha producido resultados</val>
@@ -114,6 +106,9 @@
 <str name="IDS_CAPTION_COLLATION_UNKNOWN_DATE" translate="yes">
     <val>DESCONOCIDO</val>
 </str>
+<str name="IDS_UPGRADE_UNSUPPORTED_URL" translate="yes">
+    <val>Tipo de URL no admitido.</val>
+</str>
 <str name="IDS_CAPTION_PAGE_NUMBER" translate="yes">
 	<desc>Used for page numbers, such as "5 of 20".</desc>
 	<val>%lu de %lu</val>
@@ -127,19 +122,11 @@
 <str name="IDS_CAPTION_SEND" translate="yes">
 	<val>Enviar</val>
 </str>
-<str name="IDS_CAPTION_GET_MORE_STORAGE" translate="yes">
-	<val>Obtener más almacenamiento</val>
-</str>
 <str name="IDS_CAPTION_CAMERA_ROLL" translate="yes">
 	<val>Carrete</val>
 </str>
 <str name="IDS_CAPTION_UPLOAD" translate="yes">
 	<val>Cargar</val>
-</str>
-<str name="IDS_CAPTION_TOOLBAR_CONTEXT_MENU_MY_ACCOUNT" translate="yes">
-    <desc>Menu item title for the toolbar menu on iPhone/iPod touch devices to view user's account
-        details.</desc>
-    <val>Mi cuenta</val>
 </str>
 <str name="IDS_CAPTION_ERROR" translate="yes">
 	<val>Error</val>
@@ -178,16 +165,13 @@
 	<val>No</val>
 </str>
 <str name="IDS_CAPTION_LAST_UPDATED" translate="yes">
-	<val>Última actualización: %@</val>
+    <val>Última actualización: %@</val>
 </str>
 <str name="IDS_CAPTION_NEVER" translate="yes">
-	<val>Nunca</val>
+    <val>Nunca</val>
 </str>
 <str name="IDS_CAPTION_LOADING_MORE_ITEMS_FAILED" translate="yes">
     <val>Se ha producido un error al cargar uno o más elementos.</val>
-</str>
-<str name="IDS_UPGRADE_UNSUPPORTED_URL" translate="yes">
-    <val>Tipo de URL no admitido.</val>
 </str>
 <str name="IDS_CAPTION_LIST_VIEW_MULTI_SELECT_CHECKMARK" translate="yes">
     <val>Marcar elemento</val>
@@ -241,6 +225,10 @@
 <str name="IDS_CAPTION_NAVIGATION_BAR_TITLE_ASSETS" translate="yes">
     <desc>Appears as the title of the root asset browser.</desc>
     <val>Activos</val>
+</str>
+<str name="IDS_CAPTION_NAVIGATION_BAR_TITLE_LIBRARIES" translate="yes">
+    <desc>Appears as the title of the root asset browser.</desc>
+    <val>Bibliotecas</val>
 </str>
 <str name="IDS_CAPTION_NAVIGATION_BAR_MORE_BUTTON_POPOVER_VIEW_AS_LIST" translate="yes">
     <desc>Option to show the list view in the main asset browser.</desc>
@@ -315,9 +303,6 @@
 <str name="IDS_CAPTION_SOURCE_TYPE_SELECTION_POPOVER_DRAW" translate="no">
     <val>Illustrator Draw</val>
 </str>
-<str name="IDS_CAPTION_SOURCE_TYPE_SELECTION_POPOVER_CAMERA_ROLL" translate="yes">
-    <val>Carrete</val>
-</str>
 <str name="IDS_CAPTION_SOURCE_TYPE_SELECTION_POPOVER_ON_MY_DEVICE" translate="yes">
     <desc>This string will be appened by the model of the device. So an example would be "On My
         iPod touch"</desc>
@@ -325,5 +310,8 @@
 </str>
 <str name="IDS_CAPTION_STORAGE_NETWORK_ERROR" translate="yes">
     <val>No es posible conectar con iTunes Store para obtener más almacenamiento.</val>
+</str>
+<str name="IDS_CAPTION_PREPARING_VIDEO_FOR_PREVIEW" translate="yes">
+    <val>Estamos preparando su vídeo para vista previa. Vuelva pronto para verlo.</val>
 </str>
 </asf>

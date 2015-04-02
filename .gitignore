@@ -1,0 +1,4 @@
+iphone/AdobeCreativeSDKFoundation.framework/*
+iphone/AdobeCreativeSDKImage.framework/*
+build/*
+/.DS_Store

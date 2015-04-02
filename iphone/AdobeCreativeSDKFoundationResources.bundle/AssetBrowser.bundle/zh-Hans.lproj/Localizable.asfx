@@ -50,16 +50,22 @@
 <str name="IDS_CAPTION_OPEN" translate="yes">
 	<val>打开</val>
 </str>
+<str name="IDS_CAPTION_OPEN_AS_RENDITON" translate="yes">
+    <val>用作图像</val>
+</str>
+<str name="IDS_CAPTION_INSPECT_EXTRACT_LAYERS" translate="yes">
+    <val>提取图层</val>
+</str>
 <str name="IDS_CAPTION_OPEN_SELECTION" translate="yes">
-	<val>打开选项</val>
+    <val>打开选项</val>
 </str>
 <str name="IDS_CAPTION_OPEN_SELECTION_HUNDRED" translate="yes">
-	<desc>The OPEN SELECTION string will be substituted in here.</desc>
-	<val>%@ (99+)</val>
+    <desc>The OPEN SELECTION string will be substituted in here.</desc>
+    <val>%@ (99+)</val>
 </str>
 <str name="IDS_CAPTION_OPEN_SELECTION_NUMBER" translate="yes">
-	<desc>The OPEN SELECTION string will be substituted in here.</desc>
-	<val>%@ (%lu)</val>
+    <desc>The OPEN SELECTION string will be substituted in here.</desc>
+    <val>%@ (%lu)</val>
 </str>
 <str name="IDS_CAPTION_ACCOUNT_DROPDOWN" translate="yes">
 	<val>帐户下拉列表</val>
@@ -77,23 +83,6 @@
 <str name="IDS_CAPTION_MODIFIED_DATE_TIME" translate="yes">
 	<desc>Placeholders for date and time.</desc>
 	<val>修改日期: %@ %@</val>
-</str>
-<str name="IDS_CAPTION_SWITCH_ACCOUNTS" translate="yes">
-	<val>切换帐户</val>
-</str>
-<str name="IDS_CAPTION_STORAGE_GB_USED_PERCENTAGE" translate="yes">
-	<desc>Will be substituted with two different decimal numbers for storage space.</desc>
-	<val>已使用 %@</val>
-</str>
-<str name="IDS_CAPTION_STORAGE_GB_USED_FRACTION" translate="yes">
-	<desc>Will be substituted with two different decimal numbers for storage space.</desc>
-	<val>(%@ / %@ GB)</val>
-</str>
-<str name="IDS_CAPTION_STORAGE_INFO_CALCULATING_PLACEHOLDER" translate="yes">
-    <val>（正在计算容量）</val>
-</str>
-<str name="IDS_CAPTION_EDIT_SETTINGS" translate="yes">
-	<val>编辑 Creative Cloud 设置</val>
 </str>
 <str name="IDS_CAPTION_NO_SEARCH_RESULTS" translate="yes">
 	<val>此搜索未返回任何结果</val>
@@ -117,6 +106,9 @@
 <str name="IDS_CAPTION_COLLATION_UNKNOWN_DATE" translate="yes">
     <val>未知</val>
 </str>
+<str name="IDS_UPGRADE_UNSUPPORTED_URL" translate="yes">
+    <val>不支持的 URL 类型。</val>
+</str>
 <str name="IDS_CAPTION_PAGE_NUMBER" translate="yes">
 	<desc>Used for page numbers, such as "5 of 20".</desc>
 	<val>%lu / %lu</val>
@@ -130,19 +122,11 @@
 <str name="IDS_CAPTION_SEND" translate="yes">
 	<val>发送</val>
 </str>
-<str name="IDS_CAPTION_GET_MORE_STORAGE" translate="yes">
-	<val>获取更多存储空间</val>
-</str>
 <str name="IDS_CAPTION_CAMERA_ROLL" translate="yes">
-	<val>本机照片</val>
+	<val>相册</val>
 </str>
 <str name="IDS_CAPTION_UPLOAD" translate="yes">
 	<val>上载</val>
-</str>
-<str name="IDS_CAPTION_TOOLBAR_CONTEXT_MENU_MY_ACCOUNT" translate="yes">
-    <desc>Menu item title for the toolbar menu on iPhone/iPod touch devices to view user's account
-        details.</desc>
-    <val>我的帐户</val>
 </str>
 <str name="IDS_CAPTION_ERROR" translate="yes">
 	<val>错误</val>
@@ -181,16 +165,13 @@
 	<val>否</val>
 </str>
 <str name="IDS_CAPTION_LAST_UPDATED" translate="yes">
-	<val>上次更新: %@</val>
+    <val>上次更新: %@</val>
 </str>
 <str name="IDS_CAPTION_NEVER" translate="yes">
-	<val>从不</val>
+    <val>从不</val>
 </str>
 <str name="IDS_CAPTION_LOADING_MORE_ITEMS_FAILED" translate="yes">
     <val>载入一个或多个项目时出错。</val>
-</str>
-<str name="IDS_UPGRADE_UNSUPPORTED_URL" translate="yes">
-    <val>不支持的 URL 类型。</val>
 </str>
 <str name="IDS_CAPTION_LIST_VIEW_MULTI_SELECT_CHECKMARK" translate="yes">
     <val>选中项</val>
@@ -244,6 +225,10 @@
 <str name="IDS_CAPTION_NAVIGATION_BAR_TITLE_ASSETS" translate="yes">
     <desc>Appears as the title of the root asset browser.</desc>
     <val>资源</val>
+</str>
+<str name="IDS_CAPTION_NAVIGATION_BAR_TITLE_LIBRARIES" translate="yes">
+    <desc>Appears as the title of the root asset browser.</desc>
+    <val>库</val>
 </str>
 <str name="IDS_CAPTION_NAVIGATION_BAR_MORE_BUTTON_POPOVER_VIEW_AS_LIST" translate="yes">
     <desc>Option to show the list view in the main asset browser.</desc>
@@ -318,9 +303,6 @@
 <str name="IDS_CAPTION_SOURCE_TYPE_SELECTION_POPOVER_DRAW" translate="no">
     <val>Illustrator Draw</val>
 </str>
-<str name="IDS_CAPTION_SOURCE_TYPE_SELECTION_POPOVER_CAMERA_ROLL" translate="yes">
-    <val>相册</val>
-</str>
 <str name="IDS_CAPTION_SOURCE_TYPE_SELECTION_POPOVER_ON_MY_DEVICE" translate="yes">
     <desc>This string will be appened by the model of the device. So an example would be "On My
         iPod touch"</desc>
@@ -328,5 +310,8 @@
 </str>
 <str name="IDS_CAPTION_STORAGE_NETWORK_ERROR" translate="yes">
     <val>无法连接到 iTunes Store 获取更多存储空间。</val>
+</str>
+<str name="IDS_CAPTION_PREPARING_VIDEO_FOR_PREVIEW" translate="yes">
+    <val>我们正在准备您的视频预览。请稍后进行查看。</val>
 </str>
 </asf>

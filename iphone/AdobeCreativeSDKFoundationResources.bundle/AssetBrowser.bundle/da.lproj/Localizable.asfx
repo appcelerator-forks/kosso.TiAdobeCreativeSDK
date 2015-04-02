@@ -50,16 +50,22 @@
 <str name="IDS_CAPTION_OPEN" translate="yes">
 	<val>ÅBN</val>
 </str>
+<str name="IDS_CAPTION_OPEN_AS_RENDITON" translate="yes">
+    <val>Brug som bill</val>
+</str>
+<str name="IDS_CAPTION_INSPECT_EXTRACT_LAYERS" translate="yes">
+    <val>Udtræk lag</val>
+</str>
 <str name="IDS_CAPTION_OPEN_SELECTION" translate="yes">
-	<val>ÅBN DET MARKEREDE</val>
+    <val>ÅBN VALGTE</val>
 </str>
 <str name="IDS_CAPTION_OPEN_SELECTION_HUNDRED" translate="yes">
-	<desc>The OPEN SELECTION string will be substituted in here.</desc>
-	<val>%@ (99+)</val>
+    <desc>The OPEN SELECTION string will be substituted in here.</desc>
+    <val>%@ (99+)</val>
 </str>
 <str name="IDS_CAPTION_OPEN_SELECTION_NUMBER" translate="yes">
-	<desc>The OPEN SELECTION string will be substituted in here.</desc>
-	<val>%@ (%lu)</val>
+    <desc>The OPEN SELECTION string will be substituted in here.</desc>
+    <val>%@ (%lu)</val>
 </str>
 <str name="IDS_CAPTION_ACCOUNT_DROPDOWN" translate="yes">
 	<val>Rullemenu for konto</val>
@@ -77,23 +83,6 @@
 <str name="IDS_CAPTION_MODIFIED_DATE_TIME" translate="yes">
 	<desc>Placeholders for date and time.</desc>
 	<val>Ændret: %@ kl. %@</val>
-</str>
-<str name="IDS_CAPTION_SWITCH_ACCOUNTS" translate="yes">
-	<val>Skift mellem konti</val>
-</str>
-<str name="IDS_CAPTION_STORAGE_GB_USED_PERCENTAGE" translate="yes">
-	<desc>Will be substituted with two different decimal numbers for storage space.</desc>
-	<val>%@ anvendt</val>
-</str>
-<str name="IDS_CAPTION_STORAGE_GB_USED_FRACTION" translate="yes">
-	<desc>Will be substituted with two different decimal numbers for storage space.</desc>
-	<val>(%@ af %@ GB)</val>
-</str>
-<str name="IDS_CAPTION_STORAGE_INFO_CALCULATING_PLACEHOLDER" translate="yes">
-    <val>(Beregner forbrug)</val>
-</str>
-<str name="IDS_CAPTION_EDIT_SETTINGS" translate="yes">
-	<val>Rediger Creative Cloud-indst.</val>
 </str>
 <str name="IDS_CAPTION_NO_SEARCH_RESULTS" translate="yes">
 	<val>Denne søgning gav ingen resultater</val>
@@ -117,6 +106,9 @@
 <str name="IDS_CAPTION_COLLATION_UNKNOWN_DATE" translate="yes">
     <val>UKENDT</val>
 </str>
+<str name="IDS_UPGRADE_UNSUPPORTED_URL" translate="yes">
+    <val>Ikke-understøttet URL-adressetype.</val>
+</str>
 <str name="IDS_CAPTION_PAGE_NUMBER" translate="yes">
 	<desc>Used for page numbers, such as "5 of 20".</desc>
 	<val>%lu af %lu</val>
@@ -130,19 +122,11 @@
 <str name="IDS_CAPTION_SEND" translate="yes">
 	<val>Send</val>
 </str>
-<str name="IDS_CAPTION_GET_MORE_STORAGE" translate="yes">
-	<val>Få mere lagerplads</val>
-</str>
 <str name="IDS_CAPTION_CAMERA_ROLL" translate="yes">
-	<val>Kamerarulle</val>
+	<val>Filmrulle</val>
 </str>
 <str name="IDS_CAPTION_UPLOAD" translate="yes">
 	<val>Upload</val>
-</str>
-<str name="IDS_CAPTION_TOOLBAR_CONTEXT_MENU_MY_ACCOUNT" translate="yes">
-    <desc>Menu item title for the toolbar menu on iPhone/iPod touch devices to view user's account
-        details.</desc>
-    <val>Min konto</val>
 </str>
 <str name="IDS_CAPTION_ERROR" translate="yes">
 	<val>Fejl</val>
@@ -181,16 +165,13 @@
 	<val>Nej</val>
 </str>
 <str name="IDS_CAPTION_LAST_UPDATED" translate="yes">
-	<val>Sidst opdateret: %@</val>
+    <val>Sidst opdateret: %@</val>
 </str>
 <str name="IDS_CAPTION_NEVER" translate="yes">
-	<val>Aldrig</val>
+    <val>Aldrig</val>
 </str>
 <str name="IDS_CAPTION_LOADING_MORE_ITEMS_FAILED" translate="yes">
     <val>Der kunne ikke indlæses et eller flere emner.</val>
-</str>
-<str name="IDS_UPGRADE_UNSUPPORTED_URL" translate="yes">
-    <val>Ikke-understøttet URL-adressetype.</val>
 </str>
 <str name="IDS_CAPTION_LIST_VIEW_MULTI_SELECT_CHECKMARK" translate="yes">
     <val>Kontroller emne</val>
@@ -219,15 +200,15 @@
 </str>
 <str name="IDS_INFO_SIZE_KB" translate="yes">
     <desc>Indicates the size of the file in kilobytes.</desc>
-    <val>%@KB</val>
+    <val>%@ KB</val>
 </str>
 <str name="IDS_INFO_SIZE_MB" translate="yes">
     <desc>Indicates the size of the file in megabytes.</desc>
-    <val>%@MB</val>
+    <val>%@ MB</val>
 </str>
 <str name="IDS_INFO_SIZE_GB" translate="yes">
     <desc>Indicates the size of the file in gigabytes.</desc>
-    <val>%@GB</val>
+    <val>%@ GB</val>
 </str>
 <str name="IDS_INFO_WIDTH" translate="yes">
     <desc>Indicates the width of the file.</desc>
@@ -244,6 +225,10 @@
 <str name="IDS_CAPTION_NAVIGATION_BAR_TITLE_ASSETS" translate="yes">
     <desc>Appears as the title of the root asset browser.</desc>
     <val>Fordele</val>
+</str>
+<str name="IDS_CAPTION_NAVIGATION_BAR_TITLE_LIBRARIES" translate="yes">
+    <desc>Appears as the title of the root asset browser.</desc>
+    <val>Biblioteker</val>
 </str>
 <str name="IDS_CAPTION_NAVIGATION_BAR_MORE_BUTTON_POPOVER_VIEW_AS_LIST" translate="yes">
     <desc>Option to show the list view in the main asset browser.</desc>
@@ -318,9 +303,6 @@
 <str name="IDS_CAPTION_SOURCE_TYPE_SELECTION_POPOVER_DRAW" translate="no">
     <val>Illustrator Draw</val>
 </str>
-<str name="IDS_CAPTION_SOURCE_TYPE_SELECTION_POPOVER_CAMERA_ROLL" translate="yes">
-    <val>Filmrulle</val>
-</str>
 <str name="IDS_CAPTION_SOURCE_TYPE_SELECTION_POPOVER_ON_MY_DEVICE" translate="yes">
     <desc>This string will be appened by the model of the device. So an example would be "On My
         iPod touch"</desc>
@@ -328,5 +310,8 @@
 </str>
 <str name="IDS_CAPTION_STORAGE_NETWORK_ERROR" translate="yes">
     <val>Kan ikke komme på iTunes Store for at få ekstra plads.</val>
+</str>
+<str name="IDS_CAPTION_PREPARING_VIDEO_FOR_PREVIEW" translate="yes">
+    <val>Vi er ved at gøre videoen klar til forhåndsvisning. Du kan vende tilbage og se den om lidt.</val>
 </str>
 </asf>
